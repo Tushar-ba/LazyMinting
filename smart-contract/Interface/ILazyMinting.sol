@@ -9,7 +9,8 @@ interface ILazyMinting {
         uint256 amount;
         string tokenURI;
     }
-     function redeem(NFTVoucher calldata voucher,bytes calldata _signature) external;
+    //mapping (uint256 => NFTVoucher) public voucherDetails;
+     function redeem(address seller,NFTVoucher calldata voucher,bytes calldata _signature) external;
         function _verify(NFTVoucher memory voucher, bytes memory _signature)
         external
         view
